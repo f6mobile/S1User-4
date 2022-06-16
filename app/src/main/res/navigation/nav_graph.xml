@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signIn_Screen">
+
+    <fragment
+        android:id="@+id/signUp_Screen"
+        android:name="com.denis.smart_house.SignUp_Screen"
+        android:label="fragment_sign_up__screen"
+        tools:layout="@layout/fragment_sign_up__screen" >
+        <action
+            android:id="@+id/action_signUp_Screen_to_homepage"
+            app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_signUp_Screen_to_signIn_Screen"
+            app:destination="@id/signIn_Screen" />
+    </fragment>
+    <fragment
+        android:id="@+id/signIn_Screen"
+        android:name="com.denis.smart_house.SignIn_Screen"
+        android:label="fragment_sign_in__screen"
+        tools:layout="@layout/fragment_sign_in__screen" >
+        <action
+            android:id="@+id/action_signIn_Screen_to_signUp_Screen"
+            app:destination="@id/signUp_Screen" />
+        <action
+            android:id="@+id/action_signIn_Screen_to_homepage"
+            app:destination="@id/homepage" />
+    </fragment>
+    <fragment
+        android:id="@+id/homepage"
+        android:name="com.denis.smart_house.homepage"
+        android:label="fragment_homepage"
+        tools:layout="@layout/fragment_homepage" >
+        <action
+            android:id="@+id/action_homepage_to_statics"
+            app:destination="@id/statics" />
+        <action
+            android:id="@+id/action_homepage_to_routlines"
+            app:destination="@id/routlines" />
+        <action
+            android:id="@+id/action_homepage_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/launch_screen2"
+        android:name="com.denis.smart_house.Launch_screen"
+        android:label="fragment_launch_screen"
+        tools:layout="@layout/fragment_launch_screen" />
+    <fragment
+        android:id="@+id/routlines"
+        android:name="com.denis.smart_house.Routlines"
+        android:label="fragment_routlines"
+        tools:layout="@layout/fragment_routlines" >
+        <action
+            android:id="@+id/action_routlines_to_homepage"
+            app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_routlines_to_homepage2"
+            app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_routlines_to_statics"
+            app:destination="@id/statics" />
+        <action
+            android:id="@+id/action_routlines_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.denis.smart_house.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settings_to_homepage"
+            app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_settings_to_routlines"
+            app:destination="@id/routlines" />
+        <action
+            android:id="@+id/action_settings_to_statics"
+            app:destination="@id/statics" />
+    </fragment>
+    <fragment
+        android:id="@+id/statics"
+        android:name="com.denis.smart_house.statics"
+        android:label="fragment_statics"
+        tools:layout="@layout/fragment_statics" >
+        <action
+            android:id="@+id/action_statics_to_homepage"
+            app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_statics_to_homepage2"
+            app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_statics_to_routlines"
+            app:destination="@id/routlines" />
+        <action
+            android:id="@+id/action_statics_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+</navigation>
