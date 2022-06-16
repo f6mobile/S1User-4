@@ -65,9 +65,7 @@ public class homepage extends Fragment {
                              Bundle savedInstanceState) {
         View inflatedView = inflater.inflate(R.layout.fragment_homepage,container,false);
 
-        statics = (Button) inflatedView.findViewById(R.id.statics);
-        routlines = (Button) inflatedView.findViewById(R.id.routlines);
-        settings = (Button) inflatedView.findViewById(R.id.settings);
+
 
 
         return inflatedView;
